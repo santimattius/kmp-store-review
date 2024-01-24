@@ -9,7 +9,7 @@ import platform.UIKit.UISceneActivationStateForegroundActive
 import platform.UIKit.UIWindowScene
 
 class AppleStoreReviewDataSource(
-    private val params: ReviewInitParams,
+    private val params: ReviewSourceParams,
 ) : ReviewDataSource {
     override fun requestReview(): Flow<ReviewResultCode> = flow {
         if (systemVersionMoreOrEqualThan("14.0")) {

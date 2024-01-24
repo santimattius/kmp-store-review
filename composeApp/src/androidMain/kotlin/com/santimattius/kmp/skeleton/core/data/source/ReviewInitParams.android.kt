@@ -2,8 +2,8 @@ package com.santimattius.kmp.skeleton.core.data.source
 
 import android.app.Activity
 
-actual class ReviewInitParams(val activity: Activity)
+actual class ReviewSourceParams(val activity: Activity)
 
-actual fun getReviewDataSource(params: ReviewInitParams): ReviewDataSource {
+actual fun getReviewDataSource(params: ReviewSourceParams): ReviewDataSource {
     return GooglePlayReviewDataSource(params)
 }

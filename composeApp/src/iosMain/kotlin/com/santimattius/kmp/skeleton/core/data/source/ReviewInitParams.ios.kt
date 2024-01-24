@@ -1,7 +1,7 @@
 package com.santimattius.kmp.skeleton.core.data.source
 
-actual class ReviewInitParams(val appStoreId: String)
+actual class ReviewSourceParams(val appStoreId: String)
 
-actual fun getReviewDataSource(params: ReviewInitParams): ReviewDataSource {
+actual fun getReviewDataSource(params: ReviewSourceParams): ReviewDataSource {
     return AppleStoreReviewDataSource(params)
 }

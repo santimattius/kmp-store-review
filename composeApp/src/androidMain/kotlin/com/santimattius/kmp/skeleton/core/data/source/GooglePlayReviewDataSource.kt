@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.tasks.await
 
 class GooglePlayReviewDataSource(
-    private val params: ReviewInitParams,
+    private val params: ReviewSourceParams,
 ) : ReviewDataSource {
     override fun requestReview(): Flow<ReviewResultCode> {
         return flow {
