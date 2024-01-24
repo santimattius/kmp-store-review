@@ -43,6 +43,9 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
 
             implementation(libs.koin.android)
+
+            implementation(libs.google.play.review.ktx)
+            implementation(libs.coroutines.play.services)
         }
         val commonMain by getting {
             dependencies {

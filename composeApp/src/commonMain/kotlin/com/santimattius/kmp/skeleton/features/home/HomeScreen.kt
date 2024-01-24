@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
@@ -24,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
 import com.santimattius.kmp.skeleton.core.ui.components.AppBar
+import com.santimattius.kmp.skeleton.core.ui.components.AppBarIcon
 import com.santimattius.kmp.skeleton.core.ui.components.ErrorView
 import com.santimattius.kmp.skeleton.core.ui.components.LoadingIndicator
 import com.santimattius.kmp.skeleton.core.ui.components.NetworkImage
@@ -43,7 +45,19 @@ fun HomeScreenContent(
 ) {
     val state by screenModel.state.collectAsState()
     Scaffold(
-        topBar = { AppBar(title = "Compose Skeleton") },
+        topBar = {
+            AppBar(
+                title = "Compose Skeleton",
+                actions = {
+                    AppBarIcon(
+                        imageVector = Icons.Default.Star,
+                        onClick = {
+                            screenModel.launchReview()
+                        }
+                    )
+                }
+            )
+        },
         floatingActionButtonPosition = FabPosition.Center,
         floatingActionButton = {
             FloatingActionButton(onClick = { screenModel.randomImage() }) {
