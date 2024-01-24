@@ -1,4 +1,6 @@
-# KMP Compose Gradle Skeleton
+# KMP Store Review
+
+Example implementing In App Review using native Android and iOS support.
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
