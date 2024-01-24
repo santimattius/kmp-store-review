@@ -2,6 +2,8 @@
 
 Example implementing In App Review using native Android and iOS support.
 
+Base on: https://proandroiddev.com/sharing-in-app-review-logic-in-kmp-module-4c608fb38178
+
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
